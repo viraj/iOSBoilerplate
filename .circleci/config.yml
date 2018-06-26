@@ -4,14 +4,14 @@
 #
 version: 2
 jobs:
-  build:
+  build-and-test:
 
     # Specify the Xcode version to use
     macos:
       xcode: "9.4.0"
+    working_directory: /Users/distiller/project
     environment:
       FL_OUTPUT_DIR: output
-      FASTLANE_LANE: adhoc
     steps:
       - checkout
 
@@ -30,7 +30,15 @@ jobs:
       # and save the same XML files under test-results folder
       # in the Artifacts tab
       - store_test_results:
-          path: test-results
+          path: output/scan
+      - store_artifacts:
+          path: output
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build-and-test
