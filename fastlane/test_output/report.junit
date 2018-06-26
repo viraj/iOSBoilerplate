@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='UI Tests.xctest' tests='5' failures='3'>
   <testsuite name='Unit_Tests.ViewControllerSpec' tests='2' failures='1'>
-    <testcase classname='Unit_Tests.ViewControllerSpec' name='_viewDidLoad____sets_the_defaults' time='0.008'/>
+    <testcase classname='Unit_Tests.ViewControllerSpec' name='_viewDidLoad____sets_the_defaults' time='0.005'/>
     <testcase classname='Unit_Tests.ViewControllerSpec' name='_viewDidLoad____sets_the_view'>
       <failure message='expected to equal &lt;UIExtendedSRGBColorSpace 1 0 0 1&gt;, got &lt;UIExtendedGrayColorSpace 1 1&gt;'>Unit Tests/ViewControllerSpec.swift:31</failure>
     </testcase>
