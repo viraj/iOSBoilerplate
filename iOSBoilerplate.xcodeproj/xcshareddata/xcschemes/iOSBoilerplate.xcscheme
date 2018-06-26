@@ -47,6 +47,11 @@
                BlueprintName = "UI Tests"
                ReferencedContainer = "container:iOSBoilerplate.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "AppTest/testSigninButton()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
