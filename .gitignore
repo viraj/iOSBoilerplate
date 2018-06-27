@@ -1,2 +1,6 @@
 **/xcuserdata/*
 DerivedData
+
+# Fastlane output
+fastlane/report.xml
+fastlane/test_output/
