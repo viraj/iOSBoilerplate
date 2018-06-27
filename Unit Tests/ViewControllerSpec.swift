@@ -26,7 +26,12 @@ class ViewControllerSpec: QuickSpec {
             it("sets the defaults") {
                 expect(viewController.view?.backgroundColor).to(equal(.white))
             }
-            
+        }
+        
+        describe(".viewDidLoad() with fails") {
+            beforeEach {
+                let _ =  viewController.view
+            }
             it("sets the view") {
                 expect(viewController.view?.backgroundColor).to(equal(.red))
             }

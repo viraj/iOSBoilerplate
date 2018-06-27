@@ -31,7 +31,10 @@ jobs:
           path: test_results
       - store_artifacts:
           path: xcode_raw.log
-          destination: Log(row)
+          destination: Log-row
       - store_artifacts:
           path: test_results/report.html
-          destination: Report(html)
+          destination: Report-html
+      - store_artifacts:
+          path: test_results/report.xml
+          destination: Report-xml
