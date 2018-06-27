@@ -27,9 +27,9 @@ class ViewControllerSpec: QuickSpec {
                 expect(viewController.view?.backgroundColor).to(equal(.white))
             }
             
-//            it("sets the view") {
-//                expect(viewController.view?.backgroundColor).to(equal(.red))
-//            }
+            it("sets the view") {
+                expect(viewController.view?.backgroundColor).to(equal(.red))
+            }
         }
     }
 }
