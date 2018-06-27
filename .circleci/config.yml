@@ -21,7 +21,7 @@ jobs:
           command: xcrun instruments -w "iPhone 7 (11.4) [" || true
       - run:
           name: Build and run tests
-          command: set -o pipefail && xcodebuild -workspace iOSBoilerplate.xcworkspace -scheme 'iOSBoilerplate' clean build test -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE= | tee $HOME/xcode_raw.log | xcpretty --color --report junit --output results.xml
+          command: fastlane scan
           environment:
             SCAN_DEVICE: iPhone 7
             SCAN_SCHEME: iOSBoilerplate
@@ -30,7 +30,7 @@ jobs:
       # and save the same XML files under test-results folder
       # in the Artifacts tab
       - store_test_results:
-          path: results.xml
+          path: fastlane
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
